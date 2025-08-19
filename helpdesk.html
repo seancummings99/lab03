@@ -24,27 +24,75 @@
         <p>Check Blackboard for when CWA tutors will be there.</p>
 
         <form method="post" action="">
-	    <fieldset>
-		    <legend>Student details</legend>
-		    <p>
-                <label for="student_id">Student ID</label> 
-                <input type="text" name="student_id" id="student_id" required>
-            </p>  
-            <p>   
-                <label for="fname">Given Name</label>
-                <input type="text" name="fname" id="fname" required>
-                <label for="lname">Family Name</label>
-                <input type="text" name="lname" id="lname" required>
-            </p>
-        </fieldset>
-        <fieldset>
-            <legend>Your unit</legend>
-        </fieldset>
-        <fieldset>
-            <legend>Issue</legend>
-        </fieldset>
-        <fieldset>
-            <legend>Preferred Date / Time</legend>
-        </fieldset>
+            <fieldset>
+                <legend>Student details</legend>
+                <p>
+                    <label for="student_id">Student ID</label> 
+                    <input type="text" name="student_id" id="student_id" required>
+                </p>  
+                <p>   
+                    <label for="fname">Given Name</label>
+                    <input type="text" name="fname" id="fname" required>
+                    <label for="lname">Family Name</label>
+                    <input type="text" name="lname" id="lname" required>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Your unit</legend>
+                    <p>
+                        <input type="radio" id="cos10011" name="unit">
+                        <label for="cos10011">COS10011</label>
+                        <input type="radio" id="cos60004" name="unit">
+                        <label for="cos60004">COS60004</label>
+                        <input type="radio" id="cos60007" name="unit" required="required">
+                        <label for="cos60007">COS60007</label>
+                    </p>
+                    <p>
+                        <label for="tutor">Your Tutor</label>
+                            <select name="tutor" id="tutor" required="required">
+                                <option value="">Please Select</option>
+                                <option value="adam">Adam</option>
+                                <option value="brenda">Brenda</option>
+                                <option value="carlos">Carlos</option>
+                                <option value="dmitri">Dmitri</option>
+                            </select>
+                    </p>
+            </fieldset>
+            <fieldset>
+                <legend>Issue</legend>
+                    <p>
+                        <label for="html">HTML</label>
+                        <input type="checkbox" name="language[]" value="html" id="html" checked="checked">
+                        <label for="css">CSS</label>
+                        <input type="checkbox" name="language[]" value="css" id="css">
+                        <label for="js">JavaScript</label>
+                        <input type="checkbox" name="language[]" value="js" id="js">
+                        <label for="php">PHP</label>
+                        <input type="checkbox" name="language[]" value="php" id="php">
+                        <label for="mysql">MySQL</label>
+                        <input type="checkbox" name="language[]" value="mysql" id="mysql">
+                    </p>
+                    <p>
+                        <label for="issue_desc">Description of Issue</label>
+                    </p>
+                    <p>
+                        
+                    </p>
+            </fieldset>
+            <fieldset>
+                <legend>Preferred Date / Time</legend>
+                    <p>
+                        <label for="date">Date</label>
+                        <input type="date" name="dob" id="dob" placeholder="dd/mm/yyyy" maxlength="10" size="10">
+                    </p>
+                    <p>
+                        <label for="time">Time</label>
+                        <input type="time" placeholder="00:00" maxlength="5" size="5">
+                    </p>
+            </fieldset>
+
+            <input type="submit" value="Book">
+            <input type="reset" value="Reset form">
+        </form>
     </body>
 </html>
